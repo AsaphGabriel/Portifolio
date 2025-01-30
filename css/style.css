@@ -1,0 +1,338 @@
+/* ==============================
+   Reset de Estilos Básicos
+   ============================== */
+* {
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimentos padrão */
+  box-sizing: border-box; /* Inclui padding e bordas na largura e altura dos elementos */
+}
+
+html, body {
+  height: 100%; /* Garante que o HTML e o corpo ocupem toda a altura da tela */
+}
+/* Títulos */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+/* Parágrafos e textos longos */
+body, p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+/* ==============================
+   Estrutura do Layout
+   ============================== */
+.container {
+  display: flex; /* Flexbox para layout */
+  flex-direction: column; /* Coloca os filhos em uma coluna */
+  min-height: 100vh; /* Garante que a altura mínima seja a da janela de visualização */
+}
+
+/* ==============================
+   Estilos do Cabeçalho
+   ============================== */
+.main-header {
+  background-color: #333; /* Cor de fundo do cabeçalho */
+  padding: 10px; /* Espaçamento interno do cabeçalho */
+}
+
+.navbar {
+  display: flex; /* Usa flexbox para organizar os itens na barra de navegação */
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+/* Link Home */
+.home-link {
+  display: flex; /* Usando flex para centralizar o ícone */
+  align-items: center; /* Alinha o ícone verticalmente */
+}
+
+.icon-home {
+  max-height: 30px; /* Define a altura máxima do ícone */
+  width: auto; /* Mantém a proporção do ícone */
+}
+
+/* Menu de Navegação */
+.nav-menu {
+  display: flex; /* Exibe os itens em linha */
+  list-style: none; /* Remove os marcadores da lista */
+  margin: 0; /* Remove margens padrão */
+}
+
+.nav-menu li {
+  display: flex; /* Centraliza o conteúdo do item */
+  align-items: center; /* Alinhamento vertical dos itens do menu */
+  margin-left: 15px; /* Espaçamento entre os itens */
+}
+
+.nav-menu li a {
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+  padding: 10px; /* Padding para aumentar a área clicável */
+  display: flex; /* Flex para centralizar o texto */
+  align-items: center; /* Alinhamento vertical do texto */
+}
+
+/* ==============================
+   Estilos do Conteúdo Principal
+   ============================== */
+main {
+  flex: 1; /* Permite que o main ocupe o espaço restante */
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* ==============================
+   Hero Section - Ajuste com Design Moderno
+   ============================== */
+.hero {
+  display: flex;
+  align-items: center;
+  height: 100vh; /* Tela cheia */
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+  color: white;
+}
+
+.hero-image {
+  position: relative;
+  width: 35%; /* Ajusta para 30-40% da tela */
+  height: 100%;
+  background: url('../assets/profile.jpg') no-repeat center/cover;
+
+
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.hero-content {
+  width: 65%; /* Parte do texto */
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons a {
+  background-color: #007acc;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.hero-buttons a:hover {
+  background-color: #005f99;
+}
+
+
+
+/* ==============================
+   Estilos da Seção de Projetos
+   ============================== */
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 40px 20px;
+}
+
+.projeto {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.projeto h2 {
+  margin-bottom: 10px;
+  color: #007acc;
+}
+
+.projeto:hover {
+  transform: scale(1.05);
+}
+
+/* Estilização do card no modo escuro */
+.dark-mode .projeto {
+  background-color: #2e2e2e;
+  color: #f1f1f1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .projeto h2 {
+  color: #4db8ff;
+}
+
+.dark-mode .projeto:hover {
+  background-color: #3a3a3a;
+  transform: scale(1.05);
+}
+
+/* ==============================
+   Estilos da Seção Sobre
+   ============================== */
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: justify;
+}
+
+.about-section h1, 
+.about-section h2 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* ==============================
+   Estilos das Listas
+   ============================== */
+.skills-list, 
+.interests-list {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.skills-list li, 
+.interests-list li {
+  margin-bottom: 8px;
+}
+
+/* ==============================
+   Estilos do Rodapé
+   ============================== */
+.main-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ==============================
+   Botão de Modo Escuro
+   ============================== */
+#darkModeButton {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+#darkModeButton:hover {
+  background-color: #666;
+}
+
+/* Estilização do botão de dark mode */
+.dark-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+/* ==============================
+   Modo Escuro
+   ============================== */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: white !important;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode p, 
+.dark-mode li {
+  color: white !important;
+}
+
+/* ==============================
+   Estilos da Página de Contato
+   ============================== */
+.contact-form-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact-form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input, 
+.contact-form textarea {
+  border: 1px solid #bbb;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  border-color: #007acc;
+  outline: none;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Redes Sociais */
+.social-links ul {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #005f99;
+}
