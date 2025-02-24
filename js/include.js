@@ -1,5 +1,5 @@
 /**
- * 
+ * Função para carregar arquivos HTML de forma assíncrona dentro de um elemento específico.
  */
 async function loadFragment(selector, file) {
   try {
@@ -8,20 +8,22 @@ async function loadFragment(selector, file) {
     if (response.ok) {
       element.innerHTML = await response.text();
 
-      // Inicializa o botão de dark mode após carregar o header
       if (selector === "header") {
-        initializeDarkModeButton(); // Mova a lógica aqui
+        initializeDarkModeButton();
+        enableSmoothScrolling();
       }
 
     } else {
-      console.error("Erro ao carregar ${file}: ${response.statusText}");
+      console.error(`Erro ao carregar ${file}: ${response.statusText}`);
     }
   } catch (error) {
-    console.error("Erro ao processar ${file}:", error);
+    console.error(`Erro ao processar ${file}:`, error);
   }
 }
 
-// Função para inicializar o botão de dark mode
+/**
+ * Inicializa o botão de Dark Mode após o carregamento do header.
+ */
 function initializeDarkModeButton() {
   const toggleButton = document.getElementById("darkModeButton");
 
@@ -32,9 +34,40 @@ function initializeDarkModeButton() {
   }
 }
 
-// Carregar header, footer e conteúdo principal ao iniciar a página
+/**
+ * Adiciona rolagem suave ao clicar nos links do menu.
+ */
+function enableSmoothScrolling() {
+  document.querySelectorAll('.nav-menu a[href^="#"], .home-link').forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const targetId = link.getAttribute("href");
+      let targetElement;
+
+      // Se for o botão "Home", rola para o topo
+      if (link.classList.contains("home-link")) {
+        targetElement = document.body;
+      } else {
+        targetElement = document.querySelector(targetId);
+      }
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 50,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+}
+
+
+// Carregar header, footer e seções ao iniciar a página
 document.addEventListener("DOMContentLoaded", () => {
-  loadFragment("header", "header.html"); // Carrega o header
-  loadFragment("footer", "footer.html"); // Carrega o footer
-  loadFragment("#content", "projects.html"); // Conteúdo da página (ajuste conforme necessário)
+  loadFragment("header", "header.html");
+  loadFragment("footer", "footer.html");
+  loadFragment("#sobre", "about.html");
+  loadFragment("#projetos", "projects.html");
+  loadFragment("#contato", "contact.html");
 });

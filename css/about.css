@@ -1,0 +1,12 @@
+/* ==============================
+   Estilos da Seção Sobre
+   ============================== */
+.about-section{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  /* Tela cheia */
+  overflow: hidden;
+  background: rgb(37, 37, 37);
+  color: white;
+}

@@ -1,0 +1,14 @@
+/* dark-mode.css */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+  }
+  
+  .dark-mode .about-card {
+    background-color: #2e2e2e;
+    color: white;
+  }
+  
+  .dark-mode .skills-list li, .dark-mode .interests-list li {
+    background-color: #4db8ff;
+  }

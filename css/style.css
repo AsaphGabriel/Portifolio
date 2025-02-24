@@ -2,22 +2,31 @@
    Reset de Estilos Básicos
    ============================== */
 * {
-  margin: 0; /* Remove margens padrão */
-  padding: 0; /* Remove preenchimentos padrão */
-  box-sizing: border-box; /* Inclui padding e bordas na largura e altura dos elementos */
+  margin: 0;
+  /* Remove margens padrão */
+  padding: 0;
+  /* Remove preenchimentos padrão */
+  box-sizing: border-box;
+  /* Inclui padding e bordas na largura e altura dos elementos */
 }
 
-html, body {
-  height: 100%; /* Garante que o HTML e o corpo ocupem toda a altura da tela */
+html,
+body {
+  height: 100%;
+  /* Garante que o HTML e o corpo ocupem toda a altura da tela */
 }
+
 /* Títulos */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
 
 /* Parágrafos e textos longos */
-body, p {
+body,
+p {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.6;
@@ -28,63 +37,88 @@ body, p {
    Estrutura do Layout
    ============================== */
 .container {
-  display: flex; /* Flexbox para layout */
-  flex-direction: column; /* Coloca os filhos em uma coluna */
-  min-height: 100vh; /* Garante que a altura mínima seja a da janela de visualização */
+  display: flex;
+  /* Flexbox para layout */
+  flex-direction: column;
+  /* Coloca os filhos em uma coluna */
+  min-height: 100vh;
+  /* Garante que a altura mínima seja a da janela de visualização */
 }
 
 /* ==============================
    Estilos do Cabeçalho
    ============================== */
 .main-header {
-  background-color: #333; /* Cor de fundo do cabeçalho */
-  padding: 10px; /* Espaçamento interno do cabeçalho */
+  background-color: #333;
+  /* Cor de fundo do cabeçalho */
+  padding: 10px;
+  /* Espaçamento interno do cabeçalho */
 }
 
 .navbar {
-  display: flex; /* Usa flexbox para organizar os itens na barra de navegação */
-  justify-content: space-between; /* Distribui o espaço entre os elementos */
-  align-items: center; /* Alinha os itens verticalmente ao centro */
+  display: flex;
+  /* Usa flexbox para organizar os itens na barra de navegação */
+  justify-content: space-between;
+  /* Distribui o espaço entre os elementos */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
 }
 
 /* Link Home */
 .home-link {
-  display: flex; /* Usando flex para centralizar o ícone */
-  align-items: center; /* Alinha o ícone verticalmente */
+  display: flex;
+  /* Usando flex para centralizar o ícone */
+  align-items: center;
+  /* Alinha o ícone verticalmente */
 }
 
 .icon-home {
-  max-height: 30px; /* Define a altura máxima do ícone */
-  width: auto; /* Mantém a proporção do ícone */
+  max-height: 30px;
+  /* Define a altura máxima do ícone */
+  width: auto;
+  /* Mantém a proporção do ícone */
 }
 
 /* Menu de Navegação */
 .nav-menu {
-  display: flex; /* Exibe os itens em linha */
-  list-style: none; /* Remove os marcadores da lista */
-  margin: 0; /* Remove margens padrão */
+  display: flex;
+  /* Exibe os itens em linha */
+  list-style: none;
+  /* Remove os marcadores da lista */
+  margin: 0;
+  /* Remove margens padrão */
 }
 
 .nav-menu li {
-  display: flex; /* Centraliza o conteúdo do item */
-  align-items: center; /* Alinhamento vertical dos itens do menu */
-  margin-left: 15px; /* Espaçamento entre os itens */
+  display: flex;
+  /* Centraliza o conteúdo do item */
+  align-items: center;
+  /* Alinhamento vertical dos itens do menu */
+  margin-left: 15px;
+  /* Espaçamento entre os itens */
 }
 
 .nav-menu li a {
-  color: white; /* Cor do texto */
-  text-decoration: none; /* Remove o sublinhado */
-  padding: 10px; /* Padding para aumentar a área clicável */
-  display: flex; /* Flex para centralizar o texto */
-  align-items: center; /* Alinhamento vertical do texto */
+  color: white;
+  /* Cor do texto */
+  text-decoration: none;
+  /* Remove o sublinhado */
+  padding: 10px;
+  /* Padding para aumentar a área clicável */
+  display: flex;
+  /* Flex para centralizar o texto */
+  align-items: center;
+  /* Alinhamento vertical do texto */
 }
 
 /* ==============================
    Estilos do Conteúdo Principal
    ============================== */
 main {
-  flex: 1; /* Permite que o main ocupe o espaço restante */
-  padding: 20px; /* Espaçamento interno */
+  flex: 1;
+  /* Permite que o main ocupe o espaço restante */
+  padding: 20px;
+  /* Espaçamento interno */
 }
 
 /* ==============================
@@ -93,7 +127,8 @@ main {
 .hero {
   display: flex;
   align-items: center;
-  height: 100vh; /* Tela cheia */
+  height: 100vh;
+  /* Tela cheia */
   overflow: hidden;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
   color: white;
@@ -101,7 +136,8 @@ main {
 
 .hero-image {
   position: relative;
-  width: 35%; /* Ajusta para 30-40% da tela */
+  width: 35%;
+  /* Ajusta para 30-40% da tela */
   height: 100%;
   background: url('../assets/profile.jpg') no-repeat center/cover;
 
@@ -119,7 +155,8 @@ main {
 }
 
 .hero-content {
-  width: 65%; /* Parte do texto */
+  width: 65%;
+  /* Parte do texto */
   padding: 0 40px;
   display: flex;
   flex-direction: column;
@@ -210,28 +247,60 @@ main {
    ============================== */
 .about-section {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 20px;
   text-align: justify;
 }
 
-.about-section h1, 
-.about-section h2 {
+.about-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: scale(1.02);
+}
+
+.about-card h1,
+.about-card h2 {
+  text-align: center;
   color: #333;
   margin-bottom: 15px;
-  text-align: center;
 }
+
+.skills-list,
+.interests-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li,
+.interests-list li {
+  background: #007acc;
+  color: white;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+
+
 
 /* ==============================
    Estilos das Listas
    ============================== */
-.skills-list, 
+.skills-list,
 .interests-list {
   list-style-type: square;
   padding-left: 20px;
 }
 
-.skills-list li, 
+.skills-list li,
 .interests-list li {
   margin-bottom: 8px;
 }
@@ -283,56 +352,121 @@ main {
   color: white !important;
 }
 
-.dark-mode h1, 
-.dark-mode h2, 
-.dark-mode p, 
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p,
 .dark-mode li {
   color: white !important;
+}
+
+.dark-mode .contact-form {
+  background-color: #2e2e2e;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background-color: #444;
+  border-color: #666;
+  color: white;
+}
+
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form textarea:focus {
+  border-color: #4db8ff;
+  box-shadow: 0 0 8px rgba(77, 184, 255, 0.3);
+}
+
+.dark-mode .contact-form button {
+  background-color: #4db8ff;
+}
+
+.dark-mode .contact-form button:hover {
+  background-color: #3a9ae0;
+}
+
+.dark-mode .social-links a {
+  color: #4db8ff;
+}
+
+.dark-mode .social-links a:hover {
+  color: #3a9ae0;
 }
 
 /* ==============================
    Estilos da Página de Contato
    ============================== */
 .contact-form-section {
-  margin-top: 40px;
+  margin: 40px auto;
   text-align: center;
+  max-width: 500px;
 }
 
 .contact-form {
-  background-color: #f5f5f5;
-  padding: 20px;
+  background-color: #ffffff;
+  padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
-  border: 1px solid #bbb;
-  transition: border-color 0.3s;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-.contact-form input:focus, 
+.contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #007acc;
   outline: none;
+  box-shadow: 0 0 8px rgba(0, 122, 204, 0.2);
 }
 
 .contact-form button {
-  margin-top: 10px;
+  margin-top: 15px;
+  padding: 12px 20px;
   font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #007acc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #005f99;
 }
 
 /* Redes Sociais */
+.social-links {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .social-links ul {
+  display: flex;
   justify-content: center;
-  margin-top: 20px;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
 }
 
 .social-links a {
   font-size: 18px;
-  transition: color 0.3s;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .social-links a:hover {
   color: #005f99;
+  transform: scale(1.1);
 }
